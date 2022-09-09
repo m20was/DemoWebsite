@@ -1,2 +1,2 @@
 # DemoWebsite
-Official Demo College website for SIBM
+Demo Official College website for SIBM
