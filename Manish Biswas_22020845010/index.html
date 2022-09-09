@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html  >
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> SIBM Bengaluru </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;1,700&display=swap"
+            rel="stylesheet">
+        
+    </head>
+    <body>
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src="images/logo.png" height="80"></a>
+                <div class="navbar">
+                    <a href="index.html">Home</a>
+                    <a href="https://forms.gle/VfYXtUT7dVa6cztJ7">REGISTER</a>
+                    <a href="login.html">LOGIN</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">Past Events
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="https://tedx.sibmbengaluru.edu.in/season21.html">2021</a>
+                            <a href="https://tedx.sibmbengaluru.edu.in/season20.html">2020</a>
+                            <a href="https://tedx.sibmbengaluru.edu.in/season19.html">2019</a>
+                        </div>
+                    </div>
+                    <a href="https://forms.gle/T1jVCFJP6pKZfbcx6">CONTACT US</a>
+                </div>
+            </nav>
+            <div class="text-box">
+                <h1>TEDx / Alchemy </h1><h2 id="demo"></h2>
+                <p>TED is a non-profit devoted to spreading ideas, usually in the form of short, powerful talks (18 minutes or less).
+                    TED
+                    began in 1984 as a conference where Technology, Entertainment and Design converged, and today covers almost all
+                    topics —
+                    from science to business to global issues — in more than 100 languages. Meanwhile, independently run TEDx events
+                    help
+                    share ideas in communities around the world.</p>
+
+                <script>
+                    var countDownDate = new Date("FEB 20, 2023 15:37:25").getTime();
+                    var x = setInterval(function () {
+
+                        var now = new Date().getTime();
+                        var distance = countDownDate - now;
+                        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                            + minutes + "m " + seconds + "s ";
+                            if (distance < 0) {
+                            clearInterval(x);
+                            document.getElementById("demo").innerHTML = "EXPIRED";
+                        }
+                    }, 1000);
+                </script>
+                <h3>Guest Speakers</h3>
+                
+                <img class="mySlides" src="images/img1.png" height="400" alt="Samar Farooqui">
+                <img class="mySlides" src="images/img2.png" height="400" alt="Jimmy Nelson">
+                <img class="mySlides" src="images/img3.png" height="400" alt="Ken Zuckerman">
+                <img class="mySlides" src="images/img4.png" height="400" alt="Payal Arora">
+                
+                <script>
+                    var myIndex = 0;
+                    carousel();
+
+                    function carousel() {
+                        var i;
+                        var x = document.getElementsByClassName("mySlides");
+                        for (i = 0; i < x.length; i++) {
+                            x[i].style.display = "none";
+                        }
+                        myIndex++;
+                        if (myIndex > x.length) { myIndex = 1 }
+                        x[myIndex - 1].style.display = "block";
+                        setTimeout(carousel, 3000);
+                    }
+                </script>
+                <button id="myBtn">Alchemy</button><br>
+                <div id="myModal" class="modal">
+                
+                    <!-- Dialog Box content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Alchemy is the annual management conclave of SIBM Bengaluru and is the flagship event of the Conferences and
+                            Events
+                            Committee.</p>
+                    </div>
+                </div>
+                <script>
+                    var modal = document.getElementById("myModal");
+                    var btn = document.getElementById("myBtn");
+                    var span = document.getElementsByClassName("close")[0];
+                    btn.onclick = function () {
+                        modal.style.display = "block";
+                    }
+                    span.onclick = function () {
+                        modal.style.display = "none";
+                    }
+                    window.onclick = function (event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                </script><br>
+                <div class="col-md-4 col-md-push-4">
+                    <div class="contact-social">
+                        <a href="https://www.facebook.com/sibmbengaluru/" target="blank"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/SIBMBengaluru?s=08" target="blank"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/sibmbengaluru/" target="blank"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/school/sibm-bangalore/" target="blank"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://www.youtube.com/c/SIBMBengaluru" target="blank"><i class="fa fa fa-youtube"></i></a>
+                    </div>
+                </div>
+                <!-- /contact social -->
+                
+                <!-- copyright -->
+                <div class="col-md-4 col-md-pull-8">
+                    <span class="copyright">
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> PRMC </a>
+                    </span>
+                </div>
+                <!-- /copyright -->
+                
+                </div>
+                   
+                       
+                    
+                
+            </div>
+
+                
+        </section>
+    </body>
+</html>
+
